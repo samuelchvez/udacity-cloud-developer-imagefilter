@@ -20,7 +20,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
       if (image_url) {
         try {
-          const filteredImagePath = await filterImageFromURL(image_url);
+          const filteredImagePath:string = await filterImageFromURL(image_url);
 
           res.on('finish', async () => {
             await deleteLocalFiles([filteredImagePath]);
